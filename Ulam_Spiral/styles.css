@@ -1,0 +1,59 @@
+html {
+    width: 100vw;
+    height: 100vh;
+    zoom: 80%;
+    background-color: rgb(27, 27, 27);
+}
+
+#title {
+    color: aliceblue;
+    font-weight: 200;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#author {
+    color: brown;
+    font-size: 0.8em;
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.ponto {
+    background-color: rgb(247, 247, 247);
+    height: 4px;
+    width: 4px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+#caption {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    text-align: center;
+    left: 0%;
+    top: 30%;
+    font-size: 1.4em;
+    color: aliceblue;
+    background-color: rgba(78, 82, 82, 0.2);
+    border-radius: 10px;
+    transition: left 3s;
+}
+
+#close {
+    user-select: none;
+    cursor: pointer;
+    position: absolute;
+    font-style: normal;
+    top: 0%;
+    right: 5%;
+    font-size: 1.2em;
+}
