@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Wordle by Yuri Alb.</title>
+    <style>
+    </style>
+</head>
+<body id="body">
+    <main style="display: flex; flex-direction: column; align-items: center; height: 100vh;" >
+        <header>
+            <p>Yuri Albuquerque's wordle version <br>
+            <em>*This project was created only to test my knowledge of web game development.</em></p>
+        </header>
+    <div id="layout">
+        <label for=""><input type="button" maxlength="0" id="box-l1-0" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l1-1" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l1-2" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l1-3" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l1-4" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l2-0" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l2-1" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l2-2" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l2-3" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l2-4" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l3-0" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l3-1" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l3-2" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l3-3" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l3-4" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l4-0" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l4-1" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l4-2" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l4-3" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l4-4" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l5-0" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l5-1" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l5-2" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l5-3" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l5-4" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l6-0" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l6-1" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l6-2" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l6-3" ></label>
+        <label for=""><input type="button" maxlength="0" id="box-l6-4" ></label>
+    </div>
+    <div id="game-end">
+        <ul>
+        <li id="blank"></li>
+        <li id="close-window" onclick="closeW()">X</li>
+        </ul>
+    </div>
+    </main>
+    <label for=""><input type="text" maxlength="0" id="inv-box"></label>
+    <div id="keyboard" style="display: flex; flex-direction: column; align-items: center;">
+        <div id="line1" style="width: 100%; height: 90px;">
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">Q</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">W</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">E</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">R</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">T</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">Y</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">U</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">I</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">O</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">P</a>
+        </div>
+        <div id="line2" style="width: 100%; height: 90px; margin-left: 1.5em;">
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">A</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">S</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">D</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">F</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">G</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">H</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">J</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">K</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">L</a>
+            <a id="backspace" style="font-size: 1.5em;" onclick="getLetter(this)" href="#keyboard">⌫</a>
+        </div>
+        <div id="line3" style="width: 100%; height: 90px; margin-left: 2.5em;">
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">Z</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">X</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">C</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">V</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">B</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">N</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">M</a>
+            <a class="parag" onclick="getLetter(this)" href="#keyboard">Enter</a>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
